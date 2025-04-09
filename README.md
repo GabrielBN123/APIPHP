@@ -6,8 +6,8 @@
 **Desenvolvedor:** GABRIEL BATISTA DA SILVA NOGUEIRA
 
 ## Tecnologias Utilizadas
-
-- Laravel
+- PHP 8.2^
+- Laravel 12
 - Docker
 - PostgreSQL
 - Min.io
