@@ -756,13 +756,13 @@
             }
         },
         "/api/update-foto-pessoa/{pes_id}": {
-            "put": {
+            "post": {
                 "tags": [
                     "FotoPessoa"
                 ],
                 "summary": "Atualizar foto de usuário",
                 "description": "Endpoint atualizar foto de usuário, vinculando ao mesmo.",
-                "operationId": "7af596e1aeb384af0bef6815c730cdfe",
+                "operationId": "35b721210a6f7166d72fa851013e8b2d",
                 "parameters": [
                     {
                         "name": "pes_id",
@@ -776,12 +776,16 @@
                     }
                 ],
                 "requestBody": {
+                    "required": true,
                     "content": {
                         "multipart/form-data": {
                             "schema": {
+                                "required": [
+                                    "foto"
+                                ],
                                 "properties": {
                                     "foto": {
-                                        "description": "Arquivo de foto (imagem)",
+                                        "description": "Arquivo da imagem",
                                         "type": "string",
                                         "format": "binary"
                                     }
@@ -2820,13 +2824,9 @@
                         "application/json": {
                             "schema": {
                                 "properties": {
-                                    "unid_nome": {
-                                        "type": "string",
-                                        "example": "Unidade do CPA II"
-                                    },
-                                    "unid_sigla": {
-                                        "type": "string",
-                                        "example": "GTCPAII"
+                                    "end_id": {
+                                        "type": "integer",
+                                        "example": "1"
                                     }
                                 },
                                 "type": "object"
